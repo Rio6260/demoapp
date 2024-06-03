@@ -14,7 +14,7 @@ print(f"{data['symbol']} price is {data['price']}")
 app = dash.Dash(__name__)
 
 app.layout = html.Div(children=[
-    html.H1('My Dashboard'),
+    html.H1('SAMPLE'),
     dcc.Graph(
         id='example-graph',
         figure={
