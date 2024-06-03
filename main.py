@@ -1,5 +1,15 @@
+import json
+import requests
 import dash
 from dash import dcc, html
+
+key = "https://api.binance.com/api/v3/ticker/price?symbol=BTCUSDT"
+
+# requesting data from url
+data = requests.get(key)
+data = data.json()
+print(f"{data['symbol']} price is {data['price']}")
+
 
 app = dash.Dash(__name__)
 
@@ -21,4 +31,4 @@ app.layout = html.Div(children=[
 
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server(debug=False)
